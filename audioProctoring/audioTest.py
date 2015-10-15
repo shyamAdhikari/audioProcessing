@@ -566,27 +566,3 @@ def evaluatePerformance(testFile,modelName):
     
     return hitrate,total_frames 
             
-if __name__ == "__main__":
-    
-    '''trainingDataFile = None
-    label = 1
-    DEBUG = 1
-    #trainingDataFile = "./data/training_data_mfcc.txt"
-    audioFileName = "E:/voice_data/voice_sample_training/voice/arctic_0001.wav"
-    MFCCfeatureExtraction(audioFileName,trainingDataFile,label,DEBUG)'''       
-        
-        
-    #modelName = "./data/voice_nonvoice_mfcc2.model"       
-    modelName = "./data/VAD_mfcc_v3.model"              
-    model = svm_load_model(modelName)    
-    #audioFileName = "E:/voice_data/voice_sample_training/voice/sample1.wav"
-    audioFileName = "E:/voice_data/voice_sample_training/non_voice/train/noise_5.wav"     
-        
-    label,tag = MFCC_SVM(audioFileName,model,1)
-    #LTSE_VAD(audioFileName)'''
-    
-    '''testFile = "E:/voice_data/voice_sample_training/voice/test/test_neg.txt"
-    
-    HR,TF = evaluatePerformance(testFile,modelName)    
-    print HR,TF'''
-    
